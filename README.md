@@ -10,28 +10,28 @@ Exposicion de una combinacion de servicios web REST y SOAP para las administraci
 - Para el consumo de los servicios usar el prefijo *http://servername:port/bankservice* seguido de los endpoint que se documentan a continuacion
 > REST
 
-### Servicios para el mantenimiento de todas las entidades
+#### Servicios para el mantenimiento de todas las entidades
 
-#### Banco
+##### Banco
 - /bank - Obtener todos los bancos
 - /bank/{id} - Obtener un banco segun su id
 - /bank/save - Registrar un banco
 
-#### Sucursal
+##### Sucursal
 - /branch - Obtener todas las sucursales
 - /branch/{id} - Obtener una sucursal segun su id
 - /branch/save/{id} - Registrar una sucursal a un banco, dado el id del banco
 
-#### Orden de pago
+##### Orden de pago
 - /payment - Obtener todas las ordenes
 - /payment/{id} - Obtener una orden segun su id
 - /payment/save - Registrar una orden
 
-### Listar las ordenes de pago de una sucursal segun el tipo de moneda
+#### Listar las ordenes de pago de una sucursal segun el tipo de moneda
 - /branch/payments/{id}
 
 > SOAP
-### Listar las sucursales de un banco
+#### Listar las sucursales de un banco
 - /sucursalesservice - Obtener todas las sucursales de un banco dado el nombre del banco
 
 ## Ejemplos de objetos válidos para peticiones
