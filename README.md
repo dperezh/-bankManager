@@ -26,3 +26,8 @@ $ git clone https://github.com/dperezh/-bankManager.git
 ```
 $ mvn clean install
 ```
+
+## Iniciar
+```
+$ mvn spring-boot:run
+```
