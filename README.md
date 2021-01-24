@@ -26,6 +26,7 @@ Exposicion de una combinacion de servicios web REST y SOAP para las administraci
 - /payment - Obtener todas las ordenes
 - /payment/{id} - Obtener una orden segun su id
 - /payment/save - Registrar una orden
+- /associate/{orderId}/{branchId} - Asociar una orden a una sucursal
 
 #### Listar las ordenes de pago de una sucursal segun el tipo de moneda
 - /branch/payments/{id}
@@ -64,6 +65,54 @@ Exposicion de una combinacion de servicios web REST y SOAP para las administraci
 - 2 (DECLINED)
 - 3 (FAILED)
 - 4 (CANCELED)
+```
+
+## Ejemplos de posibles respuestas
+> Banco
+```json
+{
+    "id": 1,
+    "name": "Bank",
+    "address": "Your address",
+    "registrydate": "10/10/20"
+}
+```
+> Sucursal
+```json
+{
+    "id": 1,
+    "name": "Sucursal",
+    "address": "Your address",
+    "registrydate": "10/10/20",
+    "bank": {
+        "id": 1,
+        "name": "Bank",
+        "address": "Your address",
+        "registrydate": "10/10/20"
+    }
+}
+```
+> Orden de pago
+```json
+{
+    "id": 1,
+    "amount": 100.0,
+    "currency": "Euro",
+    "state": "CANCELED",
+    "paymentDate": "12/12/21",
+    "branchOffice": {
+        "id": 1,
+        "name": "Sucursal",
+        "address": "Your address",
+        "registrydate": "10/10/20",
+        "bank": {
+            "id": 1,
+            "name": "Bank",
+            "address": "Your address",
+            "registrydate": "10/10/20"
+        }
+    }
+}
 ```
 
 ## Descargar proyecto

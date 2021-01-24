@@ -31,4 +31,12 @@ public class PaymentOrderController implements IPaymentOrderController {
     public PaymentOrder addPaymentOrder(@Valid PaymentOrder paymentOrder) {
         return service.save(paymentOrder);
     }
+
+    @Override
+    public Response associateOrderToBranch(Integer orderId, Integer branchId) {
+        PaymentOrder paymentOrder = service.associateOrderToBranch(orderId, branchId);
+        if(paymentOrder != null) {
+            return Response.ok(paymentOrder).build();
+        } else return Response.notModified("No se pudo vincular, entidades no encontradas").build();
+    }
 }
