@@ -8,7 +8,7 @@ Exposicion de una combinacion de servicios web REST y SOAP para las administraci
 
 ## Servicios
 - Para el consumo de los servicios usar el prefijo *http://servername:port/bankservice* seguido de los endpoint que se documentan a continuacion
-> REST
+### REST
 
 #### Servicios para el mantenimiento de todas las entidades
 
@@ -30,7 +30,7 @@ Exposicion de una combinacion de servicios web REST y SOAP para las administraci
 #### Listar las ordenes de pago de una sucursal segun el tipo de moneda
 - /branch/payments/{id}
 
-> SOAP
+### SOAP
 #### Listar las sucursales de un banco
 - /sucursalesservice - Obtener todas las sucursales de un banco dado el nombre del banco
 
